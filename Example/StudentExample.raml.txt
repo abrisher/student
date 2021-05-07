@@ -1,0 +1,18 @@
+#%RAML 1.0 NamedExample
+value: 
+  studentId: avedu-0001
+  firstName : John
+  middleName?: B
+  lastName: Doe 
+  address: 
+    addressLine1: 123 street
+    addressLine2?: apt 401
+    city: Springfield
+    state: VA
+    zipCode: "22151" 
+    country: USA 
+  dateOfBirth: 2001-02-05
+  Phone: 571-111-1111
+  Email: johnbdoe@gmail.com
+  Programs: undergrad
+  fieldOfStudy: Education & Public Service

@@ -1,0 +1,8 @@
+#%RAML 1.0 NamedExample
+value:
+  addressLine1: 123 street
+  addressLine2?: apt 401
+  city: Springfield
+  state: VA
+  zipCode: "22151" 
+  country: USA 

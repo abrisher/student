@@ -1,0 +1,8 @@
+#%RAML 1.0 DataType
+type: object
+properties: 
+  courseId: string
+  coursetitle: string 
+  creditHours: number
+  department: string
+  

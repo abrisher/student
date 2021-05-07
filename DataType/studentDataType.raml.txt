@@ -1,0 +1,16 @@
+#%RAML 1.0 DataType
+type: object
+properties:
+  studentId: string
+  title?: string
+  firstName : string 
+  middleName?: string
+  lastName: string 
+  address: !include ../DataType/addressDataType.raml
+  dateOfBirth: date-only
+  Phone: string
+  Email: string
+  Programs: 
+    enum: [certificate, associate degree, undergrad, graduate,  doctorate]
+  fieldOfStudy: 
+    enum: [Business, Education & Public Service, Information Technology, Arts]

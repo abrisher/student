@@ -1,0 +1,16 @@
+#%RAML 1.0 NamedExample
+value:
+  teachersId: AF-001
+  title?: Dr
+  firstName: Alexander
+  lastName: Gregory
+  address: 
+    addressLine1: 231 street 
+    city: Falls Church
+    state: Virginia 
+    country: USA
+    zipCode: "22011"
+  dateOfBirth: 1977-11-05
+  email: alexander.gregory@ave.edu
+  gender: male
+  courseName: music theory

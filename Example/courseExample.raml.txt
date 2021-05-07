@@ -1,0 +1,7 @@
+#%RAML 1.0 NamedExample
+value:
+  courseId: Mus_201
+  coursetitle: Music Theory 
+  creditHours: 3
+  department: Music
+  
