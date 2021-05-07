@@ -1,0 +1,162 @@
+#%RAML 1.0
+title: Students
+mediaType: application/json
+types:
+  studentDT: !include ../DataType/studentDataType.raml
+  errorType: !include ../DataType/ErrorDataType.raml
+  address: !include ../DataType/addressDataType.raml
+  teacher: !include ../DataType/teachersDataType.raml
+  course: !include  ../DataType/coursesDataType.raml
+
+/students:
+  get:
+    headers:
+      Accept?: 
+    responses:
+      200:
+        headers:
+          Cache-Control:
+          Expires:
+            type: datetime
+        body:
+          application/json:
+          application/xml:
+            type: array
+            items: studentDT []
+      404:
+        body:
+          type: errorType
+      406:
+        body:
+          type: errorType
+  post:
+    body:
+      type: studentDT
+    responses:
+      201:
+        headers:
+          Location:
+        body:
+      503:
+        body:
+          type: errorType
+  /{studentId}:
+    get:
+      responses:
+        200:
+          body:
+        404:
+          body:
+            type: errorType
+    put:
+      body:
+      responses:
+        200:
+          body:
+        201:
+          headers:
+            Location:
+          body:
+            
+
+    delete:
+      responses:
+        200:
+          body:
+        404:
+          body:
+            type: errorType
+    /courses:
+      get:
+        responses:
+          200:
+            body:
+          404:
+            body:
+              type: errorType
+        
+/teachers:
+  get:
+    responses:
+      200:
+        body:
+      404:
+          body:
+            type: errorType
+  post:
+    body:
+    responses:
+      201:
+        headers:
+          Location:
+        body:
+      503:
+        body:
+          type: errorType
+  /{teachersID}:
+    get:
+      responses:
+        200:
+          body:
+        404:
+          body:
+            type: errorType
+            
+    delete:
+      responses:
+        200:
+          body:
+        404:
+          body:
+            type: errorType
+    post:
+      body:
+      responses:
+        201:
+          headers:
+            Location:
+          body:
+        503:
+          body:
+            type: errorType
+            
+    
+/courses:
+  post:
+    body:
+    responses:
+      201:
+        headers:
+          Location:
+        body:
+      503:
+        body:
+          type: errorType
+  /{coursesID}:
+    get:
+      responses:
+        200:
+          body:
+        404:
+          body:
+            type: errorType
+            
+    delete:
+      responses:
+        200:
+          body:
+        404:
+          body:
+            type: errorType
+            
+    put:
+      body:
+      responses:
+        200:
+          body:
+        201:
+          headers:
+            Location:
+          body:
+      
+    
